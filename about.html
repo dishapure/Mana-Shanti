@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Services | Vastu Consultancy</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Lotus-Style Cards */
+    .lotus-container {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 80px auto;
+      perspective: 1000px;
+    }
+
+    .petal {
+      width: 120px;
+      height: 160px;
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-size: cover;
+      background-position: center;
+      transform-origin: center bottom;
+      transition: transform 0.5s ease, z-index 0.5s ease;
+      cursor: pointer;
+    }
+
+    .petal:nth-child(1) { transform: rotate(0deg) translate(-50%, -50%) rotate(0deg); }
+    .petal:nth-child(2) { transform: rotate(72deg) translate(-50%, -50%) rotate(-72deg); }
+    .petal:nth-child(3) { transform: rotate(144deg) translate(-50%, -50%) rotate(-144deg); }
+    .petal:nth-child(4) { transform: rotate(216deg) translate(-50%, -50%) rotate(-216deg); }
+    .petal:nth-child(5) { transform: rotate(288deg) translate(-50%, -50%) rotate(-288deg); }
+
+    .lotus-container:hover .petal:nth-child(1) { transform: rotate(0deg) translate(-50%, -180%) rotate(0deg); z-index: 5; }
+    .lotus-container:hover .petal:nth-child(2) { transform: rotate(72deg) translate(-50%, -180%) rotate(-72deg); z-index: 4; }
+    .lotus-container:hover .petal:nth-child(3) { transform: rotate(144deg) translate(-50%, -180%) rotate(-144deg); z-index: 3; }
+    .lotus-container:hover .petal:nth-child(4) { transform: rotate(216deg) translate(-50%, -180%) rotate(-216deg); z-index: 2; }
+    .lotus-container:hover .petal:nth-child(5) { transform: rotate(288deg) translate(-50%, -180%) rotate(-288deg); z-index: 1; }
+
+    .services-title {
+      text-align: center;
+      margin-top: 60px;
+      font-size: 2rem;
+      color: #00c853;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+   <a href="index.html" class="logo-group" style="text-decoration: none; color: inherit;">
+  <img src="vastu_logo.jpg" alt="Vastu Logo" class="logo" />
+  <span class="company-name">Vastu Consultancies</span>
+</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li><a href="user_dash.html" class="cta-button">User Sign in</a></li>
+        <li><a href="astro_dash.html" class="cta-button">Astrologer Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <h2 class="services-title">Our Vastu Services</h2>
+
+  <!-- Lotus Style Fan Cards -->
+  <div class="lotus-container">
+    <div class="petal" style="background-image: url('img1.jpg');"></div>
+    <div class="petal" style="background-image: url('img2.jpeg');"></div>
+    <div class="petal" style="background-image: url('img3.jpg');"></div>
+    <div class="petal" style="background-image: url('img4.jpeg');"></div>
+    <div class="petal" style="background-image: url('img5.webp');"></div>
+  </div>
+<div style="max-width: 650px; margin: 40px auto; text-align: center; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #444;">
+  <h1 style="font-weight: 800; font-size: 3rem; color: #00796b; margin-bottom: 20px;">Astrologer X</h1>
+  <p style="font-size: 1.2rem; line-height: 1.7; cursor: default;">
+    <span class="sentence">Renowned for her deep insight and accurate predictions, she is a highly respected astrologer with over 3000 satisfied clients worldwide.</span>
+  </p>
+  <p style="font-size: 1.2rem; line-height: 1.7; cursor: default;">
+    <span class="sentence">Her expertise spans across various branches of astrology, offering personalized guidance that has transformed the lives of many.</span>
+  </p>
+  <p style="font-size: 1.2rem; line-height: 1.7; cursor: default;">
+    <span class="sentence">Each consultation is marked by her compassionate approach and profound understanding of cosmic energies, making her a trusted figure in the astrology community.</span>
+  </p>
+  <p style="font-size: 1.2rem; line-height: 1.7; cursor: default;">
+    <span class="sentence">With an impeccable track record, every client speaks highly of her professionalism and the positive impact of her advice.</span>
+  </p>
+  <p style="font-size: 1.2rem; line-height: 1.7; cursor: default;">
+    <span class="sentence">The countless glowing reviews stand as a testament to her dedication and skill, reflecting the trust and admiration she has earned over the years.</span>
+  </p>
+  <p style="font-size: 1.2rem; line-height: 1.7; cursor: default;">
+    <span class="sentence">Her passion for astrology, combined with her genuine care for her clients' well-being, truly sets her apart as a beacon of light for those seeking clarity and direction.</span>
+  </p>
+</div>
+
+</body>
+</html>

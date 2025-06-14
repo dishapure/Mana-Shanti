@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vastu Consultancy</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .carousel-container {
+      position: relative;
+      overflow: hidden;
+      margin: 50px 20px;
+    }
+
+    .carousel {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .card {
+      background: white;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      flex-shrink: 0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+    }
+
+    .card-content {
+      padding: 20px;
+    }
+
+    .card h3 {
+      margin-top: 0;
+    }
+
+    .card p {
+      font-size: 14px;
+      color: #555;
+    }
+
+    .nav-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #ffffff;
+      border: none;
+      font-size: 2rem;
+      padding: 10px;
+      cursor: pointer;
+      z-index: 1;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 50%;
+    }
+
+    .prev {
+      left: 10px;
+    }
+
+    .next {
+      right: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <div class="navbar">
+   <a href="index.html" class="logo-group" style="text-decoration: none; color: inherit;">
+  <img src="vastu_logo.jpg" alt="Vastu Logo" class="logo" />
+  <span class="company-name">Vastu Consultancies</span>
+</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="#">Our Services</a></li>
+        <li><a href="review.html">Reviews</a></li>
+        <li><a href="user_dash.html" class="cta-button">User Sign in</a></li>
+        <li><a href="astro_dash.html" class="cta-button">Astrologer Login</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero-section">
+    <div class="hero-content">
+      <h1>Mana Shanti.</h1>
+      <p>Vastu Consultation – Where space meets positive energy</p>
+      <div class="hero-buttons">
+        <a href="user_dash.html" class="btn primary">Book Your Appointment</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Carousel -->
+  <section>
+    <h2 style="text-align:center; margin-top: 40px;">Our Findings</h2>
+    <div class="carousel-container">
+      <button class="nav-btn prev" onclick="moveCarousel(-1)">‹</button>
+      <div class="carousel" id="carousel">
+        <!-- Card 1 -->
+        <div class="card">
+          <img src="card1.jpg" alt="Vastu Benefits" />
+          <div class="card-content">
+            <h3>Benefits of Vastu</h3>
+            <p>Align your space with cosmic energies to promote peace, health, and prosperity.</p>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+          <img src="card2.jpg" alt="Mana Shanti" />
+          <div class="card-content">
+            <h3>Mana Shanti</h3>
+            <p>Peace of mind through meditation, clarity, and emotional balance for a joyful life.</p>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+          <img src="card3.webp" alt="Numerology" />
+          <div class="card-content">
+            <h3>Numerology</h3>
+            <p>Discover how numbers influence your destiny and spiritual path in life.</p>
+          </div>
+        </div>
+        <!-- Card 4 -->
+        <div class="card">
+          <img src="card4.jpeg" alt="Energy Scanning" />
+          <div class="card-content">
+            <h3>Energy Scanning</h3>
+            <p>Scan your aura and chakras to remove blockages and realign your inner energy.</p>
+          </div>
+        </div>
+        <!-- Card 5 -->
+        <div class="card">
+          <img src="card5.jpeg" alt="Feng Shui" />
+          <div class="card-content">
+            <h3>Feng Shui</h3>
+            <p>Bring harmony through the ancient Chinese art of wind-water balance in your home.</p>
+          </div>
+        </div>
+      </div>
+      <button class="nav-btn next" onclick="moveCarousel(1)">›</button>
+    </div>
+  </section>
+
+  <script>
+    let currentIndex = 0;
+    const carousel = document.getElementById("carousel");
+    const cards = document.querySelectorAll(".card");
+    const cardWidth = 320; // width + gap
+
+    function moveCarousel(direction) {
+      currentIndex += direction;
+      if (currentIndex < 0) currentIndex = 0;
+      if (currentIndex > cards.length - 3) currentIndex = cards.length - 3; // show max 3 cards
+      carousel.style.transform = `translateX(-${currentIndex * cardWidth}px)`;
+    }
+  </script>
+</body>
+</html>
